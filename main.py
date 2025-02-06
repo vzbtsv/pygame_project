@@ -396,13 +396,26 @@ def new_game(width, height, tile_size, player_group, enemy_group, enemy_type):
 if __name__ == '__main__':
     pygame.init()
     screen = pygame.display.set_mode((width, height))
-    map = Map("ma.tmx", tile_size)
+    level_count = 0
+    map = Map("map1.tmx", tile_size)
     clock = pygame.time.Clock()
 
     enemy_type = start_screen()
 
     player, weapon, max_x, max_y, rx, ry, stop, kills, health_flag = new_game(width, height, tile_size,
                                                                               player_group, enemy_group, enemy_type)
+    if level_count == 1:
+        map = Map("map2.tmx", tile_size)
+        for enemy in enemy_group:
+            enemy.health.max_hp = 5
+            enemy.health.hp = 5
+    if level_count == 1:
+        map = Map("map2.tmx", tile_size)
+    if level_count == 2:
+        map = Map("map3.tmx", tile_size)
+        for enemy in enemy_group:
+            enemy.health.max_hp = 10
+            enemy.health.hp = 10
 
     counter, text = 20, ' 20'
     pygame.time.set_timer(pygame.USEREVENT, 1000)
@@ -437,8 +450,11 @@ if __name__ == '__main__':
         if not stop:
             if not enemy_group:
                 text = ' VICTORY'
+                level_count += 1
+
                 screen.fill('black')
                 screen.blit(font.render(text, 0, "white"), (32, 48))
+
                 stop = True
 
             keys = pygame.key.get_pressed()
@@ -532,7 +548,20 @@ if __name__ == '__main__':
                 pygame.draw.rect(button_surface, (0, 0, 0), (1, 1, 148, 1), 2)
                 pygame.draw.rect(button_surface, (0, 100, 0), (1, 48, 148, 10), 2)
 
+            if level_count == 1:
+                map = Map("map2.tmx", tile_size)
+                for enemy in enemy_group:
+                    enemy.health.max_hp = 5
+                    enemy.health.hp = 5
+            if level_count == 1:
+                map = Map("map2.tmx", tile_size)
+            if level_count == 2:
+                map = Map("map3.tmx", tile_size)
+                for enemy in enemy_group:
+                    enemy.health.max_hp = 10
+                    enemy.health.hp = 10
             button_surface.blit(new_game_text, new_game_text_rect)
             screen.blit(button_surface, (button_rect.x, button_rect.y))
+
         pygame.display.flip()
         clock.tick(FPS)
