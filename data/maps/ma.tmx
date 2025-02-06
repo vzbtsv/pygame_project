@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" source="sheet.tsx"/>
+ <layer id="1" name="Слой тайлов 1" width="40" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1dEJgzAQxvGE3jZ2DbdRuox1GztGN6hzeIWEHiGUqIn3PdzDn4P25eNHwN451wM3cCNwE/fk3h6j2f16iH0d/3f3+vcWSvd9fyOPcXP7tN3Mz/yQ/QjA7Z8fmd9pPzI/81Py03aT9+z3I62F4xG/3DZZTcc9fqVd7VeyqdU7LPHTcCv127Pvaj9NtxZ+Ld5hjfdHotq+ct8MWty3cC+w4qYVtE+4G9udEe8=
+  </data>
+ </layer>
+ <layer id="2" name="Слой тайлов 2" width="40" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztlgsOgjAMhguJ3kYv5eMuBuEyqJfxcRa3QKVpCusYG8TwJY0ipv3T/qMArKz8J498bgUyBxNHaPRJkZpNBrDNuuvCxNVEyfSk1HgjNXZG2z7ratf2fqsPQ5MnRMPFI09t/vsyn29o9Ja5TqsGPqsx+oYI1Yez0uA7m9j+C/EKRdI51XyWTJ83Ed6XVLMs2u/ozSpvwqWR6kxJnzYK1zmVdxH0K/aKx1LgmiRtmt7gTj6ZOLN7Ll9zCqFeaO9+O1nI7/PMlaD90b6LcA322u7ku80B8c+M70ye0O3kTyRNlLEzCemb9bA9t5KHY2G9M3R2KNTDFf3d48y65i7l6qvLwfdK9DBHMxs+d83ed9VFUnt47rorKy6+pvNfEQ==
+  </data>
+ </layer>
+</map>
